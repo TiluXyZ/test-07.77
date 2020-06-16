@@ -1,0 +1,19 @@
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: $bg-i;
+    padding: 5px;
+
+    span {
+        color: $texts;
+        padding: 5px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-height: 720px){
+    footer {
+        padding: 15px 0;
+    }
+}

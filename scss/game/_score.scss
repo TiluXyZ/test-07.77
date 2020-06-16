@@ -1,0 +1,55 @@
+.score {
+    background-color: $bg-i;
+    border-radius: 8px;
+    padding: 20px 15px;
+
+    h2 {
+        color: $primary;
+        padding: 5px 0;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .s-panel {
+        padding: 5px 10px;
+        
+        .s-user {
+            margin-right: 5px;
+        }
+
+        .s-computer {
+            margin-left: 5px;
+        }
+
+        .points {
+            color: $bg;
+            background-color: hsl(228, 34%, 66%);
+            font-size: 22px;
+            text-align: center;
+            padding: 5px;
+            border-radius: 2px;
+        }
+    }
+}
+
+@media screen and (min-width: 340px){
+    .score {
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .score {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    .score {
+        width: 400px;
+        margin: 0 auto;
+        padding: 25px 20px;
+    }
+}

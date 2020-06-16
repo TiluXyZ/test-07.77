@@ -1,0 +1,116 @@
+.options-g {
+    background-color: $bg-i;
+    padding: 20px 10px;
+    margin: 0 20px;
+    border-radius: 20px;
+
+    h3 {
+        color: $secondary;
+        font-size: 1.25rem;
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    .o-images {
+        .option-g {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: hsl(228, 34%, 66%);
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 100%;
+            border-style: solid;
+            border-width: 15px;
+            cursor: pointer;
+
+            &:active {
+                background-color: hsl(228, 57%, 75%);
+            }
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .first-g {
+            border-color: $rock;
+
+            &:active {
+                border-color: #ff4343;
+            }
+        }
+
+        .second-g {
+            border-color: $paper;
+
+            &:active {
+                border-color: #4e74e4;
+            }
+        }
+
+        .third-g {
+            border-color: $scissor;
+            
+            &:active {
+                border-color: #49b477;
+            }
+        }
+
+        @media screen and (min-width: 1200px){
+            .option-g:hover {
+                    background-color: hsl(228, 57%, 75%);
+            }
+    
+            .first-g:hover {
+                    border-color: #ff4343;
+            }
+
+            .second-g:hover {
+                    border-color: #4e74e4;
+            }
+
+            .third-g:hover {
+                border-color: #49b477;
+            }
+        }
+
+        .o-text {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .rock {
+            color: $rock;
+        }
+
+        .paper {
+            color: $paper;
+        }
+
+        .scissor {
+            color: $scissor;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .options-g {
+        margin: 0 100px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .options-g {
+        margin: 0 150px;
+    }
+}
+
+@media screen and (min-height: 720px){
+    .options-g {
+        padding: 30px 0;
+    }
+}

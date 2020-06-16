@@ -1,0 +1,161 @@
+.container {
+    @include grid-create(1fr, repeat(4, auto));
+
+    .principal {
+        @include grid-create(1fr, auto auto);
+        @include grid(1, 2, 2, 3);
+        grid-gap: 1rem;
+    }
+
+    .options {
+        @include grid-create(1fr, repeat(4, auto));
+        @include grid(1, 2, 3, 4);
+
+        .c-h2 {
+            @include grid(1, 2, 1, 2);
+        }
+
+        .option {  
+            @include grid-create(1fr, repeat(4, auto));
+            grid-gap: 1rem;
+        }
+
+        .first {
+            @include grid(1, 2, 2, 3);
+        }
+
+        .second {
+            @include grid(1, 2, 3, 4);
+        }
+
+        .third {
+            @include grid(1, 2, 4, 5);
+        }
+    }
+
+    .game {
+        @include grid-create(repeat(3, 1fr), repeat(2, auto));
+        @include grid(1, 2, 3, 4);
+        grid-gap: 9rem;
+
+        .score {
+            @include grid-create(1fr, auto auto);
+            @include grid(2, 3, 1, 2);
+    
+            .s-panel {
+                @include grid-create(1fr 1fr, auto)
+            }
+        }
+    
+        .options-g {
+            @include grid-create(1fr, auto auto);
+            @include grid(1, 4, 2, 3);
+            grid-gap: 1rem;
+    
+            h3 {
+                @include grid(1, 2, 1, 2)
+            }
+    
+            .o-images {
+                @include grid-create(1fr, repeat(6, auto));
+                @include grid(1, 2, 2, 3);
+                row-gap: 1rem;
+    
+                .first-g {
+                    @include grid(1, 2, 1, 2); 
+                }
+    
+                .second-g {
+                    @include grid(1, 2, 3, 4); 
+                }
+    
+                .third-g {
+                    @include grid(1, 2, 5, 6); 
+                }
+    
+                .rock {
+                    @include grid(1, 2, 2, 3); 
+                }
+    
+                .paper {
+                    @include grid(1, 2, 4, 5); 
+                }
+    
+                .scissor {
+                    @include grid(1, 2, 6, 7); 
+                }
+            }
+        }
+
+        @media screen and (min-width: 470px){
+            .options-g {
+                .o-images {
+                    @include grid-create(1fr 1fr 1fr, auto auto);
+                    @include grid(1, 2, 2, 3);
+                
+                    .first-g {
+                        @include grid(1, 2, 1, 2); 
+                    }
+                
+                    .second-g {
+                        @include grid(2, 3, 1, 2); 
+                    }
+                
+                    .third-g {
+                        @include grid(3, 4, 1, 2); 
+                    }
+                
+                    .rock {
+                        @include grid(1, 2, 2, 3); 
+                    }
+                
+                    .paper {
+                        @include grid(2, 3, 2, 3); 
+                    }
+                
+                    .scissor {
+                        @include grid(3, 4, 2, 3); 
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        @include grid(1, 2, 4, 5);
+    }
+    
+}
+
+@media screen and (min-width: 1000px) {
+
+    .container {
+        .options {
+            @include grid-create(1fr 1fr 1fr, repeat(2, auto));
+            @include grid(1, 2, 3, 4);
+    
+            .c-h2 {
+                @include grid(1, 4, 1, 2);
+            }
+    
+            .option {  
+                @include grid-create(1fr, repeat(4, auto));
+                grid-gap: 1rem;
+            }
+    
+            .first {
+                @include grid(1, 2, 2, 3);
+            }
+    
+            .second {
+                @include grid(2, 3, 2, 3);
+            }
+    
+            .third {
+                @include grid(3, 4, 2, 3);
+            }
+        }
+    }
+}
+
+

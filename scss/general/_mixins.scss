@@ -1,0 +1,14 @@
+@mixin grid-create ($columns, $rows) {
+    display: grid;
+    grid-template: {
+        columns: $columns;
+        rows: $rows;
+    }
+}
+
+@mixin grid ($c-start, $c-end, $r-start, $r-end) {
+    grid-column-start: $c-start;
+    grid-column-end: $c-end;
+    grid-row-start: $r-start;
+    grid-row-end: $r-end;
+}

@@ -1,11 +1,13 @@
+import elements from './modules/elements';
+
 const options = document.getElementById('options')
 
-const option = document.querySelectorAll('.option')
+const button = document.querySelectorAll('.button')
 
-option.forEach( option => {
-    option.addEventListener('click', (e) => {
+button.forEach( btn => {
+    btn.addEventListener('click', (e) => {
         e.preventDefault()
-
         options.remove()
+        elements()
     })
 })

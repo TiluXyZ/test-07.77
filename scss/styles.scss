@@ -1,0 +1,19 @@
+// --General--
+
+@import './general/variables';
+@import './general/general';
+@import './general/mixins';
+@import './general/scroll';
+
+// --Styles--
+
+@import './estilos/layout.scss';
+@import './estilos/header';
+@import './estilos/principal.scss';
+@import './estilos/options';
+@import './estilos/footer';
+
+// --Game--
+
+@import './game/score';
+@import './game/options';

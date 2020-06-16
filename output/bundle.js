@@ -90,10 +90,23 @@
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var options = document.getElementById('options');\nvar option = document.querySelectorAll('.option');\noption.forEach(function (option) {\n  option.addEventListener('click', function (e) {\n    e.preventDefault();\n    options.remove();\n  });\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_elements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/elements */ \"./src/modules/elements.js\");\n\nvar options = document.getElementById('options');\nvar button = document.querySelectorAll('.button');\nbutton.forEach(function (btn) {\n  btn.addEventListener('click', function (e) {\n    e.preventDefault();\n    options.remove();\n    Object(_modules_elements__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  });\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/elements.js":
+/*!*********************************!*\
+  !*** ./src/modules/elements.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar elements = function elements(e) {\n  var container = document.getElementById('container');\n  var game = document.createElement('div');\n  game.classList.add('game');\n  container.appendChild(game);\n  var score = document.createElement('div');\n  score.classList.add('score');\n  game.appendChild(score);\n  var s_title = document.createElement('h2');\n  s_title.textContent = 'Puntos';\n  score.appendChild(s_title);\n  var s_panel = document.createElement('div');\n  s_panel.classList.add('s-panel');\n  score.appendChild(s_panel);\n  var s_user = document.createElement('span');\n  s_user.textContent = '0';\n  s_user.classList.add('s-user', 'points');\n  s_panel.appendChild(s_user);\n  var s_computer = document.createElement('span');\n  s_computer.textContent = '0';\n  s_computer.classList.add('s-computer', 'points');\n  s_panel.appendChild(s_computer);\n  var options_g = document.createElement('div');\n  options_g.classList.add('options-g');\n  game.appendChild(options_g);\n  var o_title = document.createElement('h3');\n  o_title.textContent = 'Opciones';\n  options_g.appendChild(o_title);\n  var o_images = document.createElement('div');\n  o_images.classList.add('o-images');\n  options_g.appendChild(o_images);\n  var first = document.createElement('div');\n  first.classList.add('first-g', 'option-g');\n  o_images.appendChild(first);\n  var img_r = document.createElement('img');\n  img_r.setAttribute('src', './assets/svg/icon-rock.svg');\n  first.appendChild(img_r);\n  var text_r = document.createElement('span');\n  text_r.textContent = 'Piedra';\n  text_r.classList.add('rock', 'o-text');\n  o_images.appendChild(text_r);\n  var second = document.createElement('div');\n  second.classList.add('second-g', 'option-g');\n  o_images.appendChild(second);\n  var img_p = document.createElement('img');\n  img_p.setAttribute('src', './assets/svg/icon-paper.svg');\n  second.appendChild(img_p);\n  var text_p = document.createElement('span');\n  text_p.textContent = 'Papel';\n  text_p.classList.add('paper', 'o-text');\n  o_images.appendChild(text_p);\n  var third = document.createElement('div');\n  third.classList.add('third-g', 'option-g');\n  o_images.appendChild(third);\n  var img_s = document.createElement('img');\n  img_s.setAttribute('src', './assets/svg/icon-scissors.svg');\n  third.appendChild(img_s);\n  var text_s = document.createElement('span');\n  text_s.textContent = 'Tijera';\n  text_s.classList.add('scissor', 'o-text');\n  o_images.appendChild(text_s);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (elements);\n\n//# sourceURL=webpack:///./src/modules/elements.js?");
 
 /***/ })
 

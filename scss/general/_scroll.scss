@@ -1,0 +1,18 @@
+body::-webkit-scrollbar {
+    background-color: hsl(230, 20%, 22%);
+    width: 13px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: hsl(233, 20%, 17%);
+    border-radius: 10px;
+    height: 150px;
+
+    &:hover {
+        background-color: hsl(236, 21%, 16%);
+    }
+
+    &:active {
+        background-color: hsl(232, 21%, 14%);
+    }
+}

@@ -1,0 +1,22 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $text;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    background-color: $bg;
+}
+
+.game {
+    padding: 100px 0;
+}

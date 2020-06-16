@@ -1,0 +1,29 @@
+header {
+    background-color: $bg-h;
+    padding: 5px;
+
+        .title {
+            display: block;
+            color: #eee;
+            text-align: center;
+            font-size: 24px;
+            font-family: $title;
+            font-weight: 500;
+        }
+}
+
+@media screen and (min-width: 232px) {
+    header {
+        padding: 8px;
+
+        .title {
+            font-size: 28px;
+        }
+    }
+}
+
+@media screen and (min-height: 720px){
+    header {
+        padding: 15px 25px;
+    }
+}
