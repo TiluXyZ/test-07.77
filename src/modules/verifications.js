@@ -1,37 +1,44 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-console */
+import { layout } from './elements';
+
 const VerificationO = (e) => {
-    const id = e.path[0].id
-    let src = e.path[0].src
-    let opt_u;
+  const { id } = e.path[0];
+  let { src } = e.path[0];
+  let opt;
 
-    if(id === 'first' || id === 'img-f'){
-        console.log('Piedra')
-        opt_u = 1
-        if (src == undefined){
-            src = e.path[0].firstElementChild.src
-            console.log(src)
-        } else {
-            console.log(src)
-        }
-    } else if (id === 'second' || id === 'img-s'){
-        console.log('Papel')
-        opt_u = 2
-        if (src == undefined){
-            src = e.path[0].firstElementChild.src
-            console.log(src)
-        } else {
-            console.log(src)
-        }
+  if (id === 'first' || id === 'img-f') {
+    opt = 1;
+
+    if (src === undefined) {
+      src = e.path[0].firstElementChild.src;
+
+      layout(src);
     } else {
-        console.log('Tijera')
-        opt_u = 3
-        if (src == undefined){
-            src = e.path[0].firstElementChild.src
-            console.log(src)
-        } else {
-            console.log(src)
-        }
+      layout(src);
     }
-    console.log(opt_u)
-}
+  } else if (id === 'second' || id === 'img-s') {
+    opt = 2;
 
-export default VerificationO
+    if (src === undefined) {
+      src = e.path[0].firstElementChild.src;
+
+      layout(src);
+    } else {
+      layout(src);
+    }
+  } else {
+    opt = 3;
+
+    if (src === undefined) {
+      src = e.path[0].firstElementChild.src;
+
+      layout(src);
+    } else {
+      layout(src);
+    }
+  }
+  console.log(opt);
+};
+
+export default VerificationO;

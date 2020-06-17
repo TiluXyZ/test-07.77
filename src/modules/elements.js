@@ -1,140 +1,175 @@
-const elements = (e) => {
+/* eslint-disable linebreak-style */
+import create from './create';
 
-    const container = document.getElementById('container')
+const game = document.createElement('div');
 
-    const game = document.createElement('div')
+const elements = () => {
+  const container = document.getElementById('container');
 
-    game.classList.add('game')
+  game.classList.add('game');
 
-    container.appendChild(game)
+  container.appendChild(game);
 
-    const score = document.createElement('div')
+  const score = document.createElement('div');
 
-    score.classList.add('score')
+  score.classList.add('score');
 
-    game.appendChild(score)
+  game.appendChild(score);
 
-    const s_title = document.createElement('h2')
+  const titleS = document.createElement('h2');
 
-    s_title.textContent = 'Puntos'
+  titleS.textContent = 'Puntos';
 
-    score.appendChild(s_title)
+  score.appendChild(titleS);
 
-    const s_panel = document.createElement('div')
+  const panelS = document.createElement('div');
 
-    s_panel.classList.add('s-panel')
+  panelS.classList.add('s-panel');
 
-    score.appendChild(s_panel)
+  score.appendChild(panelS);
 
-    const s_user = document.createElement('span')
+  const userS = document.createElement('span');
 
-    s_user.textContent = '0'
+  userS.textContent = '0';
 
-    s_user.classList.add('s-user', 'points')
+  userS.classList.add('s-user', 'points');
 
-    s_panel.appendChild(s_user)
+  panelS.appendChild(userS);
 
-    const s_computer = document.createElement('span')
+  const computerS = document.createElement('span');
 
-    s_computer.textContent = '0'
+  computerS.textContent = '0';
 
-    s_computer.classList.add('s-computer', 'points')
+  computerS.classList.add('s-computer', 'points');
 
-    s_panel.appendChild(s_computer)
+  panelS.appendChild(computerS);
 
-    const options_g = document.createElement('div')
+  const optionsG = document.createElement('div');
 
-    options_g.classList.add('options-g')
+  optionsG.classList.add('options-g');
 
-    game.appendChild(options_g)
+  game.appendChild(optionsG);
 
-    options_g.setAttribute('id', 'options-g')
+  optionsG.setAttribute('id', 'optionsG');
 
-    const o_title = document.createElement('h3')
+  const titleO = document.createElement('h3');
 
-    o_title.textContent = 'Opciones'
+  titleO.textContent = 'Opciones';
 
-    options_g.appendChild(o_title)
+  optionsG.appendChild(titleO);
 
-    const o_images = document.createElement('div')
+  const imagesO = document.createElement('div');
 
-    o_images.classList.add('o-images')
+  imagesO.classList.add('o-images');
 
-    options_g.appendChild(o_images)
+  optionsG.appendChild(imagesO);
 
-    const first = document.createElement('div')
+  const first = document.createElement('div');
 
-    first.classList.add('first-g', 'option-g')
+  first.classList.add('first-g', 'option-g');
 
-    first.setAttribute('id', 'first')
+  first.setAttribute('id', 'first');
 
-    o_images.appendChild(first)
+  imagesO.appendChild(first);
 
-    const img_r = document.createElement('img')
+  const imgR = document.createElement('img');
 
-    img_r.setAttribute('src', './assets/svg/icon-rock.svg')
+  imgR.setAttribute('src', './assets/svg/icon-rock.svg');
 
-    img_r.setAttribute('id', 'img-f')
+  imgR.setAttribute('id', 'img-f');
 
-    first.appendChild(img_r)
+  first.appendChild(imgR);
 
-    const text_r = document.createElement('span')
+  const textR = document.createElement('span');
 
-    text_r.textContent = 'Piedra'
+  textR.textContent = 'Piedra';
 
-    text_r.classList.add('rock', 'o-text')
+  textR.classList.add('rock', 'o-text');
 
-    o_images.appendChild(text_r)
+  imagesO.appendChild(textR);
 
-    const second = document.createElement('div')
+  const second = document.createElement('div');
 
-    second.classList.add('second-g', 'option-g')
+  second.classList.add('second-g', 'option-g');
 
-    second.setAttribute('id', 'second')
+  second.setAttribute('id', 'second');
 
-    o_images.appendChild(second)
+  imagesO.appendChild(second);
 
-    const img_p = document.createElement('img')
+  const imgP = document.createElement('img');
 
-    img_p.setAttribute('src', './assets/svg/icon-paper.svg')
+  imgP.setAttribute('src', './assets/svg/icon-paper.svg');
 
-    img_p.setAttribute('id', 'img-s')
+  imgP.setAttribute('id', 'img-s');
 
-    second.appendChild(img_p)
+  second.appendChild(imgP);
 
-    const text_p = document.createElement('span')
+  const textP = document.createElement('span');
 
-    text_p.textContent = 'Papel'
+  textP.textContent = 'Papel';
 
-    text_p.classList.add('paper', 'o-text')
+  textP.classList.add('paper', 'o-text');
 
-    o_images.appendChild(text_p)
+  imagesO.appendChild(textP);
 
-    const third = document.createElement('div')
+  const third = document.createElement('div');
 
-    third.classList.add('third-g', 'option-g')
+  third.classList.add('third-g', 'option-g');
 
-    third.setAttribute('id', 'third')
+  third.setAttribute('id', 'third');
 
-    o_images.appendChild(third)
+  imagesO.appendChild(third);
 
-    const img_s = document.createElement('img')
+  const imgS = document.createElement('img');
 
-    img_s.setAttribute('src', './assets/svg/icon-scissors.svg')
+  imgS.setAttribute('src', './assets/svg/icon-scissors.svg');
 
-    img_s.setAttribute('id', 'img-t')
+  imgS.setAttribute('id', 'img-t');
 
-    third.appendChild(img_s)
+  third.appendChild(imgS);
 
-    const text_s = document.createElement('span')
+  const textS = document.createElement('span');
 
-    text_s.textContent = 'Tijera'
+  textS.textContent = 'Tijera';
 
-    text_s.classList.add('scissor', 'o-text')
+  textS.classList.add('scissor', 'o-text');
 
-    o_images.appendChild(text_s)
+  imagesO.appendChild(textS);
+};
 
-    
-}
+const layout = (img) => {
+  document.getElementById('optionsG').remove();
 
-export default elements
+  create('div', 'container-c', 'resultC', game);
+
+  const resultC = document.getElementById('resultC');
+
+  create('h3', 'result', 'result', resultC);
+
+  create('div', 'card-u', 'userCard', resultC);
+
+  const userCard = document.getElementById('userCard');
+
+  create('div', 'card-u', 'computerCard', resultC);
+
+  const computerCard = document.getElementById('computerCard');
+
+  create('span', 'versus', 'vs', resultC);
+
+  document.getElementById('vs').textContent = 'VS';
+
+  create('h3', 'card-t', 'title-u', userCard);
+
+  document.getElementById('title-u').textContent = 'Jugador';
+
+  create('h3', 'card-t', 'title-c', computerCard);
+
+  document.getElementById('title-c').textContent = 'Computadora';
+
+  create('img', 'images-u', 'imgUser', userCard);
+
+  document.getElementById('imgUser').setAttribute('src', img);
+};
+
+export { elements };
+export { layout };
