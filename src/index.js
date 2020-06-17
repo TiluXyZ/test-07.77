@@ -1,4 +1,5 @@
 import elements from './modules/elements';
+import start from './modules/start';
 
 const options = document.getElementById('options')
 
@@ -9,5 +10,6 @@ button.forEach( btn => {
         e.preventDefault()
         options.remove()
         elements()
+        start()
     })
 })

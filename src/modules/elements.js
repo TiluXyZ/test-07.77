@@ -48,6 +48,8 @@ const elements = (e) => {
 
     game.appendChild(options_g)
 
+    options_g.setAttribute('id', 'options-g')
+
     const o_title = document.createElement('h3')
 
     o_title.textContent = 'Opciones'
@@ -64,11 +66,15 @@ const elements = (e) => {
 
     first.classList.add('first-g', 'option-g')
 
+    first.setAttribute('id', 'first')
+
     o_images.appendChild(first)
 
     const img_r = document.createElement('img')
 
     img_r.setAttribute('src', './assets/svg/icon-rock.svg')
+
+    img_r.setAttribute('id', 'img-f')
 
     first.appendChild(img_r)
 
@@ -84,11 +90,15 @@ const elements = (e) => {
 
     second.classList.add('second-g', 'option-g')
 
+    second.setAttribute('id', 'second')
+
     o_images.appendChild(second)
 
     const img_p = document.createElement('img')
 
     img_p.setAttribute('src', './assets/svg/icon-paper.svg')
+
+    img_p.setAttribute('id', 'img-s')
 
     second.appendChild(img_p)
 
@@ -104,11 +114,15 @@ const elements = (e) => {
 
     third.classList.add('third-g', 'option-g')
 
+    third.setAttribute('id', 'third')
+
     o_images.appendChild(third)
 
     const img_s = document.createElement('img')
 
     img_s.setAttribute('src', './assets/svg/icon-scissors.svg')
+
+    img_s.setAttribute('id', 'img-t')
 
     third.appendChild(img_s)
 
@@ -119,6 +133,8 @@ const elements = (e) => {
     text_s.classList.add('scissor', 'o-text')
 
     o_images.appendChild(text_s)
+
+    
 }
 
 export default elements

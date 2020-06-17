@@ -36,7 +36,7 @@
     .game {
         @include grid-create(repeat(3, 1fr), repeat(2, auto));
         @include grid(1, 2, 3, 4);
-        grid-gap: 9rem;
+        grid-gap: 2rem;
 
         .score {
             @include grid-create(1fr, auto auto);
@@ -118,6 +118,12 @@
                     }
                 }
             }
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        .game {
+            grid-gap: 9rem;
         }
     }
 
