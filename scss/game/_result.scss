@@ -1,0 +1,30 @@
+.container-c {
+    .card-u {
+        background-color: $bg-i;
+        padding: 5px;
+        .card-t {
+            color: #eee;
+            text-align: center;
+        }
+
+        .images-u {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .versus {
+        color: #f4f4f4;
+        text-align: center;
+    }
+
+    .card-c {
+        background-color: $bg-i;
+        padding: 5px;
+        .card-t {
+            color: #eee;
+            text-align: center;
+        }
+    }
+}

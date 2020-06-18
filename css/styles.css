@@ -178,6 +178,49 @@ body::-webkit-scrollbar-thumb:active {
   grid-row-start: 6;
   grid-row-end: 7;
 }
+.container .game .container-c {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.container .game .container-c .result {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.container .game .container-c .card-u {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  row-gap: 1rem;
+}
+.container .game .container-c .versus {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.container .game .container-c .card-c {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.container .game .container-c .buttons {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
 @media screen and (min-width: 470px) {
   .container .game .options-g .o-images {
     display: grid;
@@ -603,6 +646,31 @@ footer span {
   .options-g {
     padding: 30px 0;
   }
+}
+.container-c .card-u {
+  background-color: #1f212e;
+  padding: 5px;
+}
+.container-c .card-u .card-t {
+  color: #eee;
+  text-align: center;
+}
+.container-c .card-u .images-u {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-c .versus {
+  color: #f4f4f4;
+  text-align: center;
+}
+.container-c .card-c {
+  background-color: #1f212e;
+  padding: 5px;
+}
+.container-c .card-c .card-t {
+  color: #eee;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

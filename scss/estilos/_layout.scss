@@ -87,6 +87,33 @@
             }
         }
 
+        .container-c {
+            @include grid-create(1fr 1fr 1fr, auto auto auto);
+            @include grid(1, 4, 2, 3);
+            
+            .result {
+                @include grid(1, 4, 1, 2);
+            }
+
+            .card-u {
+                @include grid-create(1fr, auto auto);
+                @include grid(1, 2, 2, 3);
+                row-gap: 1rem;
+            }
+
+            .versus {
+                @include grid(2, 3, 2, 3);
+            }
+
+            .card-c {
+                @include grid(3, 4, 2, 3);
+            }
+
+            .buttons {
+                @include grid(1, 4, 3, 4);
+            }
+        }
+
         @media screen and (min-width: 470px){
             .options-g {
                 .o-images {

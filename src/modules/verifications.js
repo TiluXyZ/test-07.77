@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-console */
 import { layout } from './elements';
+import computer from './computer';
 
 const VerificationO = (e) => {
   const { id } = e.path[0];
@@ -14,8 +15,10 @@ const VerificationO = (e) => {
       src = e.path[0].firstElementChild.src;
 
       layout(src);
+      computer();
     } else {
       layout(src);
+      computer();
     }
   } else if (id === 'second' || id === 'img-s') {
     opt = 2;

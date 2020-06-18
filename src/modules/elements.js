@@ -150,7 +150,7 @@ const layout = (img) => {
 
   const userCard = document.getElementById('userCard');
 
-  create('div', 'card-u', 'computerCard', resultC);
+  create('div', 'card-c', 'computerCard', resultC);
 
   const computerCard = document.getElementById('computerCard');
 
@@ -169,6 +169,10 @@ const layout = (img) => {
   create('img', 'images-u', 'imgUser', userCard);
 
   document.getElementById('imgUser').setAttribute('src', img);
+
+  create('img', 'images-c', 'imgComputer', computerCard);
+
+  create('div', 'buttons', 'btns', resultC);
 };
 
 export { elements };
