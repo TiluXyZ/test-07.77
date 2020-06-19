@@ -20,3 +20,15 @@ a {
 .game {
     padding: 100px 0;
 }
+
+.rock-b {
+    border-color: $rock;
+}
+
+.paper-b {
+    border-color: $paper;
+}
+
+.scissor-b {
+    border-color: $scissor;
+}

@@ -166,11 +166,15 @@ const layout = (img) => {
 
   document.getElementById('title-c').textContent = 'Computadora';
 
-  create('img', 'images-u', 'imgUser', userCard);
+  create('div', 'images-u', 'imagesU', userCard);
+
+  create('img', 'img-u', 'imgUser', document.getElementById('imagesU'));
 
   document.getElementById('imgUser').setAttribute('src', img);
 
-  create('img', 'images-c', 'imgComputer', computerCard);
+  create('div', 'images-c', 'imagesC', computerCard);
+
+  create('img', 'img-c', 'imgComputer', document.getElementById('imagesC'));
 
   create('div', 'buttons', 'btns', resultC);
 };

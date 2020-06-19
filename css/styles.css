@@ -21,6 +21,18 @@ a {
   padding: 100px 0;
 }
 
+.rock-b {
+  border-color: #ec3838;
+}
+
+.paper-b {
+  border-color: #426be6;
+}
+
+.scissor-b {
+  border-color: #36ad6a;
+}
+
 body::-webkit-scrollbar {
   background-color: #2d3143;
   width: 13px;
@@ -178,49 +190,6 @@ body::-webkit-scrollbar-thumb:active {
   grid-row-start: 6;
   grid-row-end: 7;
 }
-.container .game .container-c {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-.container .game .container-c .result {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-.container .game .container-c .card-u {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  row-gap: 1rem;
-}
-.container .game .container-c .versus {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-.container .game .container-c .card-c {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-.container .game .container-c .buttons {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
 @media screen and (min-width: 470px) {
   .container .game .options-g .o-images {
     display: grid;
@@ -266,6 +235,61 @@ body::-webkit-scrollbar-thumb:active {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
+  }
+}
+.container .game .container-c {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  row-gap: 1rem;
+}
+.container .game .container-c .result {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.container .game .container-c .card-u {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  row-gap: 2rem;
+}
+.container .game .container-c .versus {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.container .game .container-c .card-c {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  row-gap: 2rem;
+}
+.container .game .container-c .buttons {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+@media screen and (min-width: 1000px) {
+  .container .game .container-c {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    grid-template-rows: auto auto auto;
   }
 }
 @media screen and (min-width: 600px) {
@@ -647,30 +671,82 @@ footer span {
     padding: 30px 0;
   }
 }
+.container-c {
+  padding: 10px;
+}
+.container-c .result {
+  color: #a46cff;
+  padding: 20px 0;
+  font-size: 20px;
+  text-align: center;
+}
 .container-c .card-u {
   background-color: #1f212e;
-  padding: 5px;
+  padding: 10px 5px;
+  border-top-style: solid;
+  border-top-color: #36ad6a;
+  border-top-width: 4px;
 }
 .container-c .card-u .card-t {
-  color: #eee;
+  color: #cacaca;
   text-align: center;
 }
 .container-c .card-u .images-u {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8b97c6;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 10px;
+}
+.container-c .card-u .images-u .img-u {
+  width: 50px;
+  height: 50px;
 }
 .container-c .versus {
-  color: #f4f4f4;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cacaca;
+  font-family: "Spectral", serif;
+  font-size: 3rem;
 }
 .container-c .card-c {
   background-color: #1f212e;
-  padding: 5px;
+  padding: 10px 5px;
+  border-top-style: solid;
+  border-top-color: #ec3838;
+  border-top-width: 4px;
 }
 .container-c .card-c .card-t {
-  color: #eee;
+  color: #cacaca;
   text-align: center;
+}
+.container-c .card-c .images-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8b97c6;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 10px;
+}
+.container-c .card-c .images-c .img-c {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (min-width: 1000px) {
+  .container-c {
+    padding: 30px 80px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

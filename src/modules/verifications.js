@@ -15,10 +15,10 @@ const VerificationO = (e) => {
       src = e.path[0].firstElementChild.src;
 
       layout(src);
-      computer();
+      computer(opt);
     } else {
       layout(src);
-      computer();
+      computer(opt);
     }
   } else if (id === 'second' || id === 'img-s') {
     opt = 2;
@@ -27,8 +27,10 @@ const VerificationO = (e) => {
       src = e.path[0].firstElementChild.src;
 
       layout(src);
+      computer(opt);
     } else {
       layout(src);
+      computer(opt);
     }
   } else {
     opt = 3;
@@ -37,8 +39,10 @@ const VerificationO = (e) => {
       src = e.path[0].firstElementChild.src;
 
       layout(src);
+      computer(opt);
     } else {
       layout(src);
+      computer(opt);
     }
   }
   console.log(opt);
