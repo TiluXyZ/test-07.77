@@ -1,80 +1,76 @@
 .container-c {
-    padding: 10px;
+    padding: 5px 10px;
 
     .result {
         color: $secondary;
-        padding: 20px 0;
-        font-size: 20px;
+        padding: 5px;
+        font-size: 30px;
         text-align: center;
+        text-transform: uppercase;
     }
 
-    .card-u {
-        background-color: $bg-i;
-        padding: 10px 5px;
-        border-top-style: solid;
-        border-top-color: $scissor;
-        border-top-width: 4px;
-        .card-t {
-            color: $texts;
-            text-align: center;
-        }
-
-        .images-u {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: hsl(228, 34%, 66%);
-            height: 100px;
-            width: 100px;
-            margin: 0 auto;
-            border-radius: 100%;
-            border-style: solid;
-            border-width: 10px;
-            
-            .img-u {
-                width: 50px;
-                height: 50px;
-            }
-        }
+    .card-t {
+        color: $primary;
+        text-align: center;
     }
 
     .versus {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: $texts;
+        color: hsl(227, 58%, 78%);
         font-family: $title;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
-    .card-c {
-        background-color: $bg-i;
-        padding: 10px 5px;
-        border-top-style: solid;
-        border-top-color: $rock;
-        border-top-width: 4px;
-
-        .card-t {
-            color: $texts;
-            text-align: center;
+    @media screen and (min-width: 320px){
+        .versus {
+            font-size: 3rem;
         }
+    }
 
-        .images-c {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: hsl(228, 34%, 66%);
-            height: 100px;
-            width: 100px;
-            margin: 0 auto;
-            border-radius: 100%;
-            border-style: solid;
-            border-width: 10px;
-            
-            .img-c {
-                width: 50px;
-                height: 50px;
-            }
+    .images-l {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(228, 34%, 66%);
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+        border-radius: 100%;
+        border-style: solid;
+        border-width: 10px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 360px){
+    .container-c {
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .container-c {
+        padding: 10px;
+    
+        .card-l {
+            background-color: $bg-i;
+            padding: 10px 5px;
+            border-top-style: solid;
+            border-top-width: 4px;
+        }
+    
+        .card-u {
+            border-top-color: $scissor;
+        } 
+    
+        .card-c {
+            border-top-color: $rock;
         }
     }
 }

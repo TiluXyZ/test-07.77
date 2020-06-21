@@ -123,7 +123,7 @@
         .container-c {
             @include grid-create(1fr 1fr 1fr, auto auto auto);
             @include grid(1, 4, 2, 3);
-            row-gap: 1rem;
+            row-gap: 2rem;
             
             .result {
                 @include grid(1, 4, 1, 2);
@@ -132,7 +132,7 @@
             .card-u {
                 @include grid-create(1fr, auto auto);
                 @include grid(1, 2, 2, 3);
-                row-gap: 2rem;
+                row-gap: 1em;
             }
 
             .versus {
@@ -142,7 +142,13 @@
             .card-c {
                 @include grid-create(1fr, auto auto);
                 @include grid(3, 4, 2, 3);
-                row-gap: 2rem;
+                row-gap: 1em;
+            }
+
+            .card-l {
+                .card-t {
+                    @include grid(1, 2, 2, 3)
+                }
             }
 
             .buttons {

@@ -245,7 +245,7 @@ body::-webkit-scrollbar-thumb:active {
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
-  row-gap: 1rem;
+  row-gap: 2rem;
 }
 .container .game .container-c .result {
   grid-column-start: 1;
@@ -261,7 +261,7 @@ body::-webkit-scrollbar-thumb:active {
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
-  row-gap: 2rem;
+  row-gap: 1em;
 }
 .container .game .container-c .versus {
   grid-column-start: 2;
@@ -277,7 +277,13 @@ body::-webkit-scrollbar-thumb:active {
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
-  row-gap: 2rem;
+  row-gap: 1em;
+}
+.container .game .container-c .card-l .card-t {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 .container .game .container-c .buttons {
   grid-column-start: 1;
@@ -672,61 +678,33 @@ footer span {
   }
 }
 .container-c {
-  padding: 10px;
+  padding: 5px 10px;
 }
 .container-c .result {
   color: #a46cff;
-  padding: 20px 0;
-  font-size: 20px;
+  padding: 5px;
+  font-size: 30px;
   text-align: center;
+  text-transform: uppercase;
 }
-.container-c .card-u {
-  background-color: #1f212e;
-  padding: 10px 5px;
-  border-top-style: solid;
-  border-top-color: #36ad6a;
-  border-top-width: 4px;
-}
-.container-c .card-u .card-t {
-  color: #cacaca;
+.container-c .card-t {
+  color: #a64dfa;
   text-align: center;
-}
-.container-c .card-u .images-u {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #8b97c6;
-  height: 100px;
-  width: 100px;
-  margin: 0 auto;
-  border-radius: 100%;
-  border-style: solid;
-  border-width: 10px;
-}
-.container-c .card-u .images-u .img-u {
-  width: 50px;
-  height: 50px;
 }
 .container-c .versus {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #cacaca;
+  color: #a6b4e7;
   font-family: "Spectral", serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
-.container-c .card-c {
-  background-color: #1f212e;
-  padding: 10px 5px;
-  border-top-style: solid;
-  border-top-color: #ec3838;
-  border-top-width: 4px;
+@media screen and (min-width: 320px) {
+  .container-c .versus {
+    font-size: 3rem;
+  }
 }
-.container-c .card-c .card-t {
-  color: #cacaca;
-  text-align: center;
-}
-.container-c .card-c .images-c {
+.container-c .images-l {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -738,11 +716,33 @@ footer span {
   border-style: solid;
   border-width: 10px;
 }
-.container-c .card-c .images-c .img-c {
+.container-c .images-l img {
   width: 50px;
   height: 50px;
 }
 
+@media screen and (min-width: 360px) {
+  .container-c {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .container-c {
+    padding: 10px;
+  }
+  .container-c .card-l {
+    background-color: #1f212e;
+    padding: 10px 5px;
+    border-top-style: solid;
+    border-top-width: 4px;
+  }
+  .container-c .card-u {
+    border-top-color: #36ad6a;
+  }
+  .container-c .card-c {
+    border-top-color: #ec3838;
+  }
+}
 @media screen and (min-width: 1000px) {
   .container-c {
     padding: 30px 80px;

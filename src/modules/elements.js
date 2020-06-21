@@ -146,13 +146,17 @@ const layout = (img) => {
 
   create('h3', 'result', 'result', resultC);
 
-  create('div', 'card-u', 'userCard', resultC);
+  create('div', 'card-l', 'userCard', resultC);
 
   const userCard = document.getElementById('userCard');
 
-  create('div', 'card-c', 'computerCard', resultC);
+  userCard.classList.add('card-u');
+
+  create('div', 'card-l', 'computerCard', resultC);
 
   const computerCard = document.getElementById('computerCard');
+
+  computerCard.classList.add('card-c');
 
   create('span', 'versus', 'vs', resultC);
 
@@ -166,13 +170,13 @@ const layout = (img) => {
 
   document.getElementById('title-c').textContent = 'Computadora';
 
-  create('div', 'images-u', 'imagesU', userCard);
+  create('div', 'images-l', 'imagesU', userCard);
 
   create('img', 'img-u', 'imgUser', document.getElementById('imagesU'));
 
   document.getElementById('imgUser').setAttribute('src', img);
 
-  create('div', 'images-c', 'imagesC', computerCard);
+  create('div', 'images-l', 'imagesC', computerCard);
 
   create('img', 'img-c', 'imgComputer', document.getElementById('imagesC'));
 
