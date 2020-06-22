@@ -24,11 +24,11 @@ const computer = (num2) => {
   const element = document.getElementById('result');
 
   if ((num === 1 && num2 === 3) || (num === 2 && num2 === 1) || (num === 3 && num2 === 2)) {
-    element.textContent = 'Gana la computadora';
+    element.textContent = 'Perdiste';
   } else if (num === num2) {
     element.textContent = 'Empate';
   } else {
-    element.textContent = 'Gana el jugador';
+    element.textContent = 'Ganaste';
   }
 };
 

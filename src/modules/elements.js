@@ -168,7 +168,13 @@ const layout = (img) => {
 
   create('h3', 'card-t', 'title-c', computerCard);
 
-  document.getElementById('title-c').textContent = 'Computadora';
+  const mediaqueryList = window.matchMedia('(min-width: 500px)');
+
+  if (mediaqueryList.matches) {
+    document.getElementById('title-c').textContent = 'Computadora';
+  } else {
+    document.getElementById('title-c').textContent = 'CPU';
+  }
 
   create('div', 'images-l', 'imagesU', userCard);
 
@@ -181,6 +187,18 @@ const layout = (img) => {
   create('img', 'img-c', 'imgComputer', document.getElementById('imagesC'));
 
   create('div', 'buttons', 'btns', resultC);
+
+  create('span', 'btns', 'btn-1', document.getElementById('btns'));
+
+  create('span', 'btn', 'button-1', document.getElementById('btn-1'));
+
+  create('span', 'btns', 'btn-2', document.getElementById('btns'));
+
+  create('span', 'btn', 'button-2', document.getElementById('btn-2'));
+
+  document.getElementById('button-1').textContent = 'Ir al Menú';
+
+  document.getElementById('button-2').textContent = 'Volver a jugar';
 };
 
 export { elements };

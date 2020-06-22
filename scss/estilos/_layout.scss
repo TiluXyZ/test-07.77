@@ -152,7 +152,15 @@
             }
 
             .buttons {
+                @include grid-create(1fr, auto auto);
                 @include grid(1, 4, 3, 4);
+                row-gap: 2rem;
+            }
+
+            @media screen and (min-width: 375px){
+                .buttons {
+                    @include grid-create(1fr 1fr, auto);
+                }
             }
         }
 
