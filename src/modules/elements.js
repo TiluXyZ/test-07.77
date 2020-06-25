@@ -8,11 +8,15 @@ const elements = () => {
 
   game.classList.add('game');
 
+  game.setAttribute('id', 'game');
+
   container.appendChild(game);
 
   const score = document.createElement('div');
 
   score.classList.add('score');
+
+  score.setAttribute('id', 'score');
 
   game.appendChild(score);
 
@@ -28,21 +32,17 @@ const elements = () => {
 
   score.appendChild(panelS);
 
-  const userS = document.createElement('span');
+  create('span', 'points', 'point-u', panelS);
 
-  userS.textContent = '0';
+  document.getElementById('point-u').textContent = '0';
 
-  userS.classList.add('s-user', 'points');
+  document.getElementById('point-u').classList.add('s-user', 'points');
 
-  panelS.appendChild(userS);
+  create('span', 'points', 'point-c', panelS);
 
-  const computerS = document.createElement('span');
+  document.getElementById('point-c').textContent = '0';
 
-  computerS.textContent = '0';
-
-  computerS.classList.add('s-computer', 'points');
-
-  panelS.appendChild(computerS);
+  document.getElementById('point-c').classList.add('s-computer');
 
   const optionsG = document.createElement('div');
 

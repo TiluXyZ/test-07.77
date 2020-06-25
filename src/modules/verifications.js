@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-console */
 import { layout } from './elements';
+// eslint-disable-next-line import/no-cycle
 import computer from './computer';
 
 const VerificationO = (e) => {
@@ -45,7 +46,6 @@ const VerificationO = (e) => {
       computer(opt);
     }
   }
-  console.log(opt);
 };
 
 export default VerificationO;
