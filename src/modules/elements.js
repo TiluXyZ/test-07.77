@@ -3,7 +3,7 @@ import create from './create';
 
 const game = document.createElement('div');
 
-const elements = () => {
+const elements = (test, pointU, pointC) => {
   const container = document.getElementById('container');
 
   game.classList.add('game');
@@ -34,13 +34,19 @@ const elements = () => {
 
   create('span', 'points', 'point-u', panelS);
 
-  document.getElementById('point-u').textContent = '0';
-
-  document.getElementById('point-u').classList.add('s-user', 'points');
-
   create('span', 'points', 'point-c', panelS);
 
-  document.getElementById('point-c').textContent = '0';
+  if (test === 1) {
+    document.getElementById('point-u').textContent = '0';
+
+    document.getElementById('point-c').textContent = '0';
+  } else {
+    document.getElementById('point-u').textContent = pointU;
+
+    document.getElementById('point-c').textContent = pointC;
+  }
+
+  document.getElementById('point-u').classList.add('s-user', 'points');
 
   document.getElementById('point-c').classList.add('s-computer');
 
@@ -137,7 +143,7 @@ const elements = () => {
   imagesO.appendChild(textS);
 };
 
-const layout = (img) => {
+const layout = (img, test) => {
   document.getElementById('optionsG').remove();
 
   create('div', 'container-c', 'resultC', game);
@@ -198,7 +204,11 @@ const layout = (img) => {
 
   document.getElementById('button-1').textContent = 'Ir al Menú';
 
-  document.getElementById('button-2').textContent = 'Volver a jugar';
+  if (test === 1) {
+    document.getElementById('button-2').textContent = 'Volver a jugar';
+  } else {
+    document.getElementById('button-2').textContent = 'Siguiente ronda';
+  }
 };
 
 export { elements };

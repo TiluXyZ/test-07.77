@@ -4,7 +4,7 @@ import { layout } from './elements';
 // eslint-disable-next-line import/no-cycle
 import computer from './computer';
 
-const VerificationO = (e) => {
+const VerificationO = (e, test) => {
   const { id } = e.path[0];
   let { src } = e.path[0];
   let opt;
@@ -15,11 +15,11 @@ const VerificationO = (e) => {
     if (src === undefined) {
       src = e.path[0].firstElementChild.src;
 
-      layout(src);
-      computer(opt);
+      layout(src, test);
+      computer(opt, test);
     } else {
-      layout(src);
-      computer(opt);
+      layout(src, test);
+      computer(opt, test);
     }
   } else if (id === 'second' || id === 'img-s') {
     opt = 2;
@@ -27,11 +27,11 @@ const VerificationO = (e) => {
     if (src === undefined) {
       src = e.path[0].firstElementChild.src;
 
-      layout(src);
-      computer(opt);
+      layout(src, test);
+      computer(opt, test);
     } else {
-      layout(src);
-      computer(opt);
+      layout(src, test);
+      computer(opt, test);
     }
   } else {
     opt = 3;
@@ -39,11 +39,11 @@ const VerificationO = (e) => {
     if (src === undefined) {
       src = e.path[0].firstElementChild.src;
 
-      layout(src);
-      computer(opt);
+      layout(src, test);
+      computer(opt, test);
     } else {
-      layout(src);
-      computer(opt);
+      layout(src, test);
+      computer(opt, test);
     }
   }
 };

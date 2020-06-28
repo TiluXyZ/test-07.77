@@ -8,9 +8,21 @@ const button = document.querySelectorAll('.button');
 
 button.forEach((btn) => {
   btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    options.remove();
-    elements();
-    start();
+    if (e.toElement.id === 'first') {
+      e.preventDefault();
+      options.remove();
+      elements(1);
+      start(1);
+    } else if (e.toElement.id === 'second') {
+      e.preventDefault();
+      options.remove();
+      elements(2, 0, 0);
+      start(2);
+    } else {
+      e.preventDefault();
+      options.remove();
+      elements(2, 0, 0);
+      start(3);
+    }
   });
 });
