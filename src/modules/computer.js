@@ -73,17 +73,25 @@ const computer = (num2, test) => {
   });
 
   if (test === 1) {
-    document.getElementById('button-2').addEventListener('click', playAgain);
+    document.getElementById('button-2').addEventListener('click', () => {
+      playAgain(test);
+    });
   } else if (test === 2) {
     if (pointC === 2 || pointU === 2) {
-      document.getElementById('button-2').addEventListener('click', playAgain);
+      document.getElementById('button-2').textContent = 'Volver a jugar';
+      document.getElementById('button-2').addEventListener('click', () => {
+        playAgain(test);
+      });
     } else {
       document.getElementById('button-2').addEventListener('click', () => {
         nextRound(pointU, pointC);
       });
     }
   } else if (pointC === 3 || pointU === 3) {
-    document.getElementById('button-2').addEventListener('click', playAgain);
+    document.getElementById('button-2').textContent = 'Volver a jugar';
+    document.getElementById('button-2').addEventListener('click', () => {
+      playAgain(test);
+    });
   } else {
     document.getElementById('button-2').addEventListener('click', () => {
       nextRound(pointU, pointC, test);

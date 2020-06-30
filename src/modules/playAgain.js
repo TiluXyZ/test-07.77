@@ -3,12 +3,12 @@ import { elements } from './elements';
 // eslint-disable-next-line import/no-cycle
 import start from './start';
 
-const playAgain = () => {
+const playAgain = (num) => {
   document.getElementById('score').remove();
   document.getElementById('resultC').remove();
   document.getElementById('game').remove();
-  elements(1);
-  start(1);
+  elements(num, 0, 0);
+  start(num);
 };
 
 export default playAgain;
